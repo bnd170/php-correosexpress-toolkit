@@ -1,5 +1,5 @@
 {
-  "name": "bnd170/php-correosexpress-api",
+  "name": "bnd170/php-correosexpress-toolkit",
   "type": "project",
   "description": "Toolkit communicate with CorreosExpress REST Api",
   "minimum-stability": "dev",
