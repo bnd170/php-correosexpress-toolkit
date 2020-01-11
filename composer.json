@@ -1,0 +1,33 @@
+{
+  "name": "bnd170/php-correosexpress-api",
+  "type": "project",
+  "description": "Toolkit communicate with CorreosExpress REST Api",
+  "minimum-stability": "dev",
+  "keywords": [
+    "Toolkit",
+    "correosexpress"
+  ],
+  "homepage": "https://github.com/bnd170/php-correosexpress-toolkit",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Borja Pombo",
+      "email": "borjapombo@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "guzzlehttp/guzzle": "^6.3@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "": "tests/"
+    }
+  }
+}
