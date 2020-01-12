@@ -50,6 +50,7 @@ class Request
             'producto'                  => $this->order->productCode(),
             'portes'                    => $this->order->shippingPaidStatus(),
             'reembolso'                 => $this->order->refund(),
+            'refRecogida'               => $this->order->code(),
             'codDirecDestino'           => '',
             'password'                  => 'string',
             'listaInformacionAdicional' => [

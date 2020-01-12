@@ -14,6 +14,7 @@ final class Order
     private $productCode;
     private $shippingPaidStatus;
     private $refund;
+    private $code;
 
     public function __construct(
         string $clientCode,
@@ -23,7 +24,8 @@ final class Order
         string $weight,
         string $productCode,
         string $shippingPayed,
-        string $refund
+        string $refund,
+        string $code
     ) {
         $this->clientCode         = $clientCode;
         $this->date               = $date;
@@ -32,7 +34,8 @@ final class Order
         $this->weight             = $weight;
         $this->productCode        = $productCode;
         $this->shippingPaidStatus = $shippingPayed;
-        $this->refund          = $refund;
+        $this->refund             = $refund;
+        $this->code               = $code;
     }
 
     public function clientCode(): string
@@ -73,5 +76,10 @@ final class Order
     public function shippingPaidStatus(): string
     {
         return $this->shippingPaidStatus;
+    }
+
+    public function code(): string
+    {
+        return $this->code;
     }
 }
