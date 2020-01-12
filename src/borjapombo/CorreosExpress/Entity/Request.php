@@ -22,6 +22,8 @@ class Request
         $requestBody = [
             'solicitante'               => $this->order->clientCode(),
             'fecha'                     => ($this->order->date())->format('dmY'),
+            'horaDesde1'                => $this->order->fromTime(),
+            'horaHasta1'                => $this->order->toTime(),
             'codRte'                    => $this->sender->code(),
             'nomRte'                    => $this->sender->name(),
             'nifRte'                    => $this->sender->nif(),
@@ -61,7 +63,7 @@ class Request
             ],
         ];
 
-        for ($x=1;$x<=$this->order->numberOfPackages();$x++) {
+        for ($x = 1; $x <= $this->order->numberOfPackages(); $x++) {
             $requestBody['listaBultos'][] = [
                 [
                     'codBultoCli'   => null,

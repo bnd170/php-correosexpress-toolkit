@@ -15,10 +15,14 @@ final class Order
     private $shippingPaidStatus;
     private $refund;
     private $code;
+    private $fromTime;
+    private $toTime;
 
     public function __construct(
         string $clientCode,
         \DateTime $date,
+        string $fromTime,
+        string $toTime,
         string $comments,
         string $numberOfPackages,
         string $weight,
@@ -36,6 +40,8 @@ final class Order
         $this->shippingPaidStatus = $shippingPayed;
         $this->refund             = $refund;
         $this->code               = $code;
+        $this->fromTime           = $fromTime;
+        $this->toTime             = $toTime;
     }
 
     public function clientCode(): string
@@ -81,5 +87,15 @@ final class Order
     public function code(): string
     {
         return $this->code;
+    }
+
+    public function fromTime(): string
+    {
+        $this->fromTime;
+    }
+
+    public function toTime(): string
+    {
+        $this->toTime;
     }
 }
